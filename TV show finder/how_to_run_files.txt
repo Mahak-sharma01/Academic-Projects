@@ -1,0 +1,20 @@
+make virtual env
+python -m venv myenv
+
+activate virtual env
+>myenv\Scripts\activate
+
+get the requirements that are in requirements.txt
+>pip install -r requirements.txt
+
+Run train.py using the database 
+>python train.py --training-data tvmaze.sqlite
+
+Run classify.py using --description-file
+>python classify.py --description-file description.txt
+
+Run index.py 
+>python index.py --raw-data tvmaze.sqlite
+
+Run search.py
+>python search.py --input-file search.txt --output-json-file search_output.json --index-file indexed_tv_data.pkl
